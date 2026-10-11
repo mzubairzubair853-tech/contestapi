@@ -1,11 +1,17 @@
+import React from 'react'
+import { useUserContext } from '../context/UserContext'
 
-function Child1({ name }) {
+const Child1 = () => {
+  const { userInfo } = useUserContext()
+  
+  console.log(userInfo)
+  
   return (
     <div>
-      <h2>This is Child1</h2>
-      <div>{name}</div>
+      This is Child1 and user name is {userInfo.name} and user id is {""}
+    {userInfo.userId}
     </div>
   );
-}
+};
 
 export default Child1;

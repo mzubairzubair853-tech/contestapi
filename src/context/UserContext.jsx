@@ -4,7 +4,10 @@ import { createContext, useContext } from 'react';
 const UserProvider = createContext()
 
 const UserContext = ({ children }) => {
-  const [userInfo, setUserInfo] = useState(null)
+  const [userInfo, setUserInfo] = useState({
+    name:"Ali",
+    userId:"e1242",
+  })
   return (
     <UserProvider.Provider value={{ userInfo, setUserInfo }}>
       {children}
